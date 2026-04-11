@@ -1,0 +1,8 @@
+{
+    "require": {
+        "phpunit/phpunit": "6.2"
+	},
+	"scripts": {
+		"make": ["@php -dphar.readonly=0 package.php --make ./src --relative ./ --entry src/pocketmine/PocketMine.php --out ./PocketMine-MP.phar"]
+	}
+}	
