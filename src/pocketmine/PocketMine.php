@@ -48,7 +48,7 @@ namespace pocketmine {
 	 * 忽略掉PHP8.2大部分的过时报错(仅针对一些可以忽略不计的)
 	 * @author XinYueNeko | xigua
 	 */
-	ini_set('error_reporting', E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+	//ini_set('error_reporting', E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 
 	if(\Phar::running(true) !== ""){
 		@define('pocketmine\PATH', \Phar::running(true) . "/");
