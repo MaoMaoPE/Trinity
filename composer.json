@@ -1,6 +1,13 @@
 {
+	"name": "genisyspro/gensyspro",
+	"description": "Discontinued Till Further Notice. | Feature-rich server software for Minecraft PE and Windows 10 Edition - v1.1.x",
+	"type": "project",
+	"license": "LGPL-3.0",
     "require": {
-        "php": ">=7.2"
+        "php": ">=7.2",
+		"ext-leveldb": "*",
+		"ext-openssl": "*",
+		"ext-pthreads": "*"
 	},
 	"autoload": {
 		"psr-4": {
