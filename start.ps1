@@ -18,6 +18,13 @@ if(Test-Path "GenisysPro*.phar"){
     }
 }elseif(Test-Path "GenisysPro.phar"){
 	$file = "GenisysPro.phar"
+}elseif(Test-Path "Trinity*.phar"){
+	foreach($filename in Get-ChildItem Trinity*.phar -Name) {
+		$file = "'$filename'"
+		break
+	}
+}elseif(Test-Path "Trinity.phar"){
+	$file = "Trinity.phar"
 }elseif(Test-Path "PocketMine-MP.phar"){
 	$file = "PocketMine-MP.phar"
 }elseif(Test-Path "src\pocketmine\PocketMine.php"){

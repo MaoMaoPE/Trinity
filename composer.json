@@ -15,6 +15,6 @@
 		}
 	},
 	"scripts": {
-		"make": ["@php -dphar.readonly=0 package.php --make ./src --relative ./ --entry src/pocketmine/PocketMine.php --out ./PocketMine-MP.phar"]
+		"make": ["@php -dphar.readonly=0 package.php --make ./src --relative ./ --entry src/pocketmine/PocketMine.php --out ./Trinity.phar"]
 	}
 }	
