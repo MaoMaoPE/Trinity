@@ -375,20 +375,6 @@ class Server{
 	}
 
 	/**
-		* @return string
-		*/
-	public function getGitCommit(){
-		return \pocketmine\GIT_COMMIT;
-	}
-
-	/**
-		* @return string
-		*/
-	public function getShortGitCommit(){
-		return substr(\pocketmine\GIT_COMMIT, 0, 7);
-	}
-
-	/**
 	 * @return string
 	 */
 	public function getCodename(){
@@ -1528,7 +1514,7 @@ class Server{
 	 Client Version: §b' . $version . '§f
 	 PHP Version: §b' . PHP_VERSION . '§f 
 	 OS: §b' . PHP_OS .'§f
-	 This core is maintained by §bGenisysPro (https://github.com/GenisysPro)§f
+	 This core is fork by §bGenisysPro (https://github.com/GenisysPro)§f
 	 Chatroom on QQ: §b559301590 §f
 	 Welcome to donate us on QQ: §b1912003473§f
 	';

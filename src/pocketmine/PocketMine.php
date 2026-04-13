@@ -31,13 +31,20 @@ namespace pocketmine {
 	use pocketmine\utils\Utils;
 	use pocketmine\wizard\Installer;
 
+	/**
+	 * 名字取自 "Blue Archive" 中的
+	 *
+	 * JPN: トリニティ総合学園
+	 *
+	 * KOR: 트리니티 종합학원
+	 */
 	const POCKETMINE = "Trinity";
 	const VERSION = "1.1dev";
 	const API_VERSION = "3.0.1";
 	const CODENAME = "매지컬(Magical) 레이사(Reisa)";
 	const GENISYS_API_VERSION = '2.0.0';
 
-	/*
+	/**
 	 * Startup code. Do not look at it, it may harm you.
 	 * Most of them are hacks to fix date-related bugs, or basic functions used after this
 	 * This is the only non-class based file on this project.
