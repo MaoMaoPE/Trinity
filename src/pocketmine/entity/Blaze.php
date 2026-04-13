@@ -73,7 +73,6 @@ class Blaze extends Monster {
 			if($damager instanceof Player){
 				$lootingL = $damager->getItemInHand()->getEnchantmentLevel(Enchantment::TYPE_WEAPON_LOOTING);
 				$drops = [ItemItem::get(ItemItem::BLAZE_ROD, 0, mt_rand(0, 1 + $lootingL))];
-
 				return $drops;
 			}
 		}

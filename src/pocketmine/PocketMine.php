@@ -31,7 +31,7 @@ namespace pocketmine {
 	use pocketmine\utils\Utils;
 	use pocketmine\wizard\Installer;
 
-	const POCKETMINE = "GenisysPro";
+	const POCKETMINE = "Trinity";
 	const VERSION = "1.1dev";
 	const API_VERSION = "3.0.1";
 	const CODENAME = "매지컬(Magical) 레이사(Reisa)";
