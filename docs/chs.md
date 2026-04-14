@@ -1,4 +1,4 @@
-# 崔尼蒂
+# Trinity
 
 ##### 从[GenisysPro](https://github.com/GenisysPro)分支而来
 

@@ -48,16 +48,16 @@ if [ "$PHP_BINARY" == "" ]; then
 fi
 
 if [ "$POCKETMINE_FILE" == "" ]; then
-	if [ -f ./GenisysPro*.phar ]; then
-		POCKETMINE_FILE="./GenisysPro*.phar"
-	elif [ -f ./GenisysPro.phar ]; then
-	    	POCKETMINE_FILE="./GenisysPro.phar"
+	if [ -f ./Trinity*.phar ]; then
+		POCKETMINE_FILE="./Trinity*.phar"
+	elif [ -f ./Trinity.phar ]; then
+	    	POCKETMINE_FILE="./Trinity.phar"
 	elif [ -f ./PocketMine-MP.phar ]; then
 		POCKETMINE_FILE="./PocketMine-MP.phar"
 	elif [ -f ./src/pocketmine/PocketMine.php ]; then
 		POCKETMINE_FILE="./src/pocketmine/PocketMine.php"
 	else
-		echo "[ERROR] Couldn't find a valid Genisys installation."
+		echo "[ERROR] Couldn't find a valid Trinity installation."
 		exit 1
 	fi
 fi

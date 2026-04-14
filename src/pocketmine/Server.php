@@ -1514,10 +1514,10 @@ class Server{
 	 Client Version: §b' . $version . '§f
 	 PHP Version: §b' . PHP_VERSION . '§f 
 	 OS: §b' . PHP_OS .'§f
-	 This core is fork by §bGenisysPro (https://github.com/GenisysPro)§f
-	 Chatroom on QQ: §b559301590 §f
-	 Welcome to donate us on QQ: §b1912003473§f
+	 This core is fork by §bTrinity (https://github.com/MaoMaoPE)§f
+	 Welcome to donate us on QQ: §b3649745663§f
 	';
+		//Chatroom on QQ: §b559301590 §f
 
 		$this->getLogger()->info($string);
 	}
@@ -1692,17 +1692,17 @@ class Server{
 			}
 
 			$lang = $this->getProperty("settings.language", BaseLang::FALLBACK_LANGUAGE);
-			if(file_exists($this->filePath . "src/pocketmine/resources/genisys_$lang.yml")){
-				$content = file_get_contents($file = $this->filePath . "src/pocketmine/resources/genisys_$lang.yml");
+			if(file_exists($this->filePath . "src/pocketmine/resources/trinity_$lang.yml")){
+				$content = file_get_contents($file = $this->filePath . "src/pocketmine/resources/trinity_$lang.yml");
 			}else{
-				$content = file_get_contents($file = $this->filePath . "src/pocketmine/resources/genisys_eng.yml");
+				$content = file_get_contents($file = $this->filePath . "src/pocketmine/resources/trinity_eng.yml");
 			}
 
-			if(!file_exists($this->dataPath . "genisys.yml")){
-				@file_put_contents($this->dataPath . "genisys.yml", $content);
+			if(!file_exists($this->dataPath . "trinity.yml")){
+				@file_put_contents($this->dataPath . "trinity.yml", $content);
 			}
 			$internelConfig = new Config($file, Config::YAML, []);
-			$this->advancedConfig = new Config($this->dataPath . "genisys.yml", Config::YAML, []);
+			$this->advancedConfig = new Config($this->dataPath . "trinity.yml", Config::YAML, []);
 			$cfgVer = $this->getAdvancedProperty("config.version", 0, $internelConfig);
 			$advVer = $this->getAdvancedProperty("config.version", 0);
 
@@ -1966,7 +1966,7 @@ class Server{
 			]), $this->dserverConfig["timer"]);
 
 			if($cfgVer > $advVer){
-				$this->logger->notice("Your genisys.yml needs update");
+				$this->logger->notice("Your trinity.yml needs update");
 				$this->logger->notice("Current Version: $advVer   Latest Version: $cfgVer");
 			}
 
@@ -2396,8 +2396,8 @@ class Server{
 
 		$this->logger->info($this->getLanguage()->translateString("pocketmine.server.startFinished", [round(microtime(true) - \pocketmine\START_TIME, 3)]));
 
-		if(!file_exists($this->getPluginPath() . DIRECTORY_SEPARATOR . "GenisysPro"))
-			@mkdir($this->getPluginPath() . DIRECTORY_SEPARATOR . "GenisysPro");
+		if(!file_exists($this->getPluginPath() . DIRECTORY_SEPARATOR . "Trinity"))
+			@mkdir($this->getPluginPath() . DIRECTORY_SEPARATOR . "Trinity");
 
 		$this->tickProcessor();
 		$this->forceShutdown();

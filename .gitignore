@@ -13,6 +13,7 @@ crashdumps/*
 resource_packs/*
 *.db
 *.sqlite3
+trinity.yml
 
 # Common IDEs
 .idea/
@@ -41,3 +42,10 @@ bin-8.2/*
 
 # Composer
 vendor/*
+
+# Zipped file
+*.zip
+*.tar
+*.gz
+*.rar
+*.xz

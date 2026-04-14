@@ -9,20 +9,13 @@ if(Test-Path "bin\php\php.exe"){
 	$binary = "php"
 }
 
-if(Test-Path "GenisysPro*.phar"){
+if(Test-Path "Trinity*.phar"){
     # Windows PowerShell does not recognize file path with wildcard,
     # so we need to get the exact file path.
-    foreach($filename in Get-ChildItem GenisysPro*.phar -Name){
+    foreach($filename in Get-ChildItem Trinity*.phar -Name){
         $file = "'$filename'" # This allows the file name to contain space
         break
     }
-}elseif(Test-Path "GenisysPro.phar"){
-	$file = "GenisysPro.phar"
-}elseif(Test-Path "Trinity*.phar"){
-	foreach($filename in Get-ChildItem Trinity*.phar -Name) {
-		$file = "'$filename'"
-		break
-	}
 }elseif(Test-Path "Trinity.phar"){
 	$file = "Trinity.phar"
 }elseif(Test-Path "PocketMine-MP.phar"){
@@ -30,7 +23,7 @@ if(Test-Path "GenisysPro*.phar"){
 }elseif(Test-Path "src\pocketmine\PocketMine.php"){
 	$file = "src\pocketmine\PocketMine.php"
 }else{
-	echo "[ERROR] Couldn't find a valid GenisysPro installation."
+	echo "[ERROR] Couldn't find a valid Trinity installation."
 	pause
 	exit 1
 }

@@ -451,5 +451,4 @@ class Utils {
 		}
 		return $hash;
 	}
-
 }
