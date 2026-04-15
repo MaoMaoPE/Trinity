@@ -1510,7 +1510,7 @@ class Server{
 	 $version = implode(",",ProtocolInfo::MINECRAFT_VERSION);
 		$string = "
 
-	 Version: §b" . $this->getPocketMineVersion() . ' (Codename: ' . $this->getCodename() . ')§f
+	 Version: §b" . $this->getPocketMineVersion() . ' (Codename "' . $this->getCodename() . '")§f
 	 Client Version: §b' . $version . '§f
 	 PHP Version: §b' . PHP_VERSION . '§f 
 	 OS: §b' . PHP_OS .'§f
