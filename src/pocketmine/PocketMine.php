@@ -238,14 +238,6 @@ namespace pocketmine {
 					}
 				}
 
-				// OpenSUSE Test
-				if (file_exists('/etc/localtime')) {
-					$data = file_get_contents('/etc/localtime');
-					if($data){
-						return trim($data);
-					}
-				}
-
 				// RHEL / CentOS
 				if(file_exists('/etc/sysconfig/clock')){
 					$data = parse_ini_file('/etc/sysconfig/clock');
