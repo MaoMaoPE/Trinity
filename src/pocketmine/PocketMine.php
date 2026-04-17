@@ -27,6 +27,12 @@
  *     |  |    |  |
  *     |——|    |——|
 */
+namespace {
+	echo "请使用PM4的PHP8来获取更稳定的性能";
+	echo "PM4에 PHP 8을 사용하여 더욱 안정적인 성능을 확보하십시오.";
+	echo "Please use PHP 8 for PM4 to achieve more stable performance.";
+}
+
 
 namespace pocketmine {
 
