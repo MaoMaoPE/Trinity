@@ -26,6 +26,7 @@ use pocketmine\event\TranslationContainer;
 use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
+use pocketmine\utils\Utils;
 
 class VersionCommand extends VanillaCommand {
 
@@ -76,6 +77,8 @@ class VersionCommand extends VanillaCommand {
 			$sender->sendMessage(new TranslationContainer("pocketmine.server.info.extended5", [
 				ProtocolInfo::CURRENT_PROTOCOL
 			]));
+			/// 后续将会加入JIT状态
+			$jitMode = Utils::getOpcacheJitMode();
 		}else{
 			$pluginName = \implode(" ", $args);
 			$exactPlugin = $sender->getServer()->getPluginManager()->getPlugin($pluginName);
