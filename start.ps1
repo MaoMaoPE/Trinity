@@ -29,7 +29,7 @@ if(Test-Path "Trinity*.phar"){
 }
 
 function StartServer{
-	$command = $binary + " " + $file + " --enable-ansi"
+	$command = $binary + " -c ./bin/php " + $file + " --enable-ansi"
 	chcp 65001
 	iex $command
 }
