@@ -13,7 +13,7 @@
 		"exclude-from-classmap": [
 			"src/stubs"
 		],
-		"psr-0": {
+		"psr-4": {
 			"": ["src"]
 		}
 	},

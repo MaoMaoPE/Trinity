@@ -451,21 +451,4 @@ class Utils {
 		}
 		return $hash;
 	}
-
-	public static function getOpcacheJitMode(): ?int
-	{
-		if (
-			function_exists('opcache_reset') &&
-			($opcacheStatus = opcache_get_status(false)) !== false &&
-			isset($opcacheStatus['jit']['on'])
-		){
-			$jit = $opcacheStatus['jit']['on'];
-			if ($jit["on"] === true){
-				return (($jit["opt_flags"] >> 2) * 1000) + (($jit["opt_flags"] & 0x03) * 100) + ($jit["kind"] * 10) + $jit['opt_level'];
-			}
-			return 0;
-		}
-
-		return null;
-	}
 }

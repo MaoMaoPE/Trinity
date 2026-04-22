@@ -30,14 +30,15 @@ use pocketmine\utils\Utils;
 
 class VersionCommand extends VanillaCommand {
 
+	public bool $jitEnable;
+
 	/**
 	 * VersionCommand constructor.
 	 *
-	 * @param string $name
 	 */
-	public function __construct($name){
+	public function __construct(){
 		parent::__construct(
-			$name,
+			"version",
 			"%pocketmine.command.version.description",
 			"%pocketmine.command.version.usage",
 			["ver", "about"]
@@ -78,7 +79,12 @@ class VersionCommand extends VanillaCommand {
 				ProtocolInfo::CURRENT_PROTOCOL
 			]));
 			/// 后续将会加入JIT状态
-			$jitMode = Utils::getOpcacheJitMode();
+			$this->jitEnable  = opcache_get_status()['jit']['on'];
+			if ($this->jitEnable) {
+				$sender->sendMessage(new TranslationContainer("pocketmine.server.info.extended.jit.on"));
+			} else {
+				$sender->sendMessage(new TranslationContainer("pocketmine.server.info.extended.jit.off"));
+			}
 		}else{
 			$pluginName = \implode(" ", $args);
 			$exactPlugin = $sender->getServer()->getPluginManager()->getPlugin($pluginName);
